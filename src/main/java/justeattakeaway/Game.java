@@ -3,9 +3,12 @@ package justeattakeaway;
 import lombok.Data;
 
 import java.util.Random;
+import java.util.logging.Logger;
 
 @Data
 public class Game {
+    private final Logger logger = Logger.getLogger(this.getClass().getName());
+
     private int currentNumber;
 
     public Game() {
@@ -19,10 +22,10 @@ public class Game {
     public void playTurn(int move) {
         currentNumber = move;
         int addedNumber = getNextMove();
-        System.out.println("[GAME-OF-THREE][Added Number] " + addedNumber);
+        logger.info("[GAME-OF-THREE][Added Number] " + addedNumber);
 
         currentNumber = (move + addedNumber) / 3;
-        System.out.println("[GAME-OF-THREE][Resulting Number] " + currentNumber);
+        logger.info("[GAME-OF-THREE][Resulting Number] " + currentNumber);
     }
 
     private int getNextMove() {
