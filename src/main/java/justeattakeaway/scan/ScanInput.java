@@ -27,7 +27,7 @@ public class ScanInput {
 
         int userInput = scanner.nextInt();
         while (userInput < 3) {
-            logger.info("Wrong input, input must be > 3");
+            logger.warning("Wrong input, input must be > 3");
             userInput = scanner.nextInt();
         }
         return userInput;
