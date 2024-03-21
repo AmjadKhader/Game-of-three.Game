@@ -24,19 +24,3 @@ Each player listens for moves sent by the other player on a dedicated topic.
   player ([Player1Application](https://github.com/AmjadKhader/Game-of-Three.Player1)
   and [Player2Application](https://github.com/AmjadKhader/Game-of-Three.Player2)). They use Kafka to send and receive
   moves from their designated topics.
-
-### Running the Application:
-
-Ensure you have docker compose up using the command `docker compose up -d` from Player1 Application.
-
-**Ensure to run both services**
-
-#### Additional Notes:
-
-This is a basic implementation focusing on game logic and Kafka communication.
-You can manually choose the starting value of the game by calling `POST /game/play` from Player 1 application
-
-**Technologies Used:**
-
-* Spring Boot
-* Apache Kafka
